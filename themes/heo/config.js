@@ -5,8 +5,8 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '我的Youutbe频道', url: 'https://www.youtube.com/@Bimuakung' },
-    { title: '我的Bilibili', url: 'https://space.bilibili.com/38343840' }
+    { title: '欢迎访问我的Youutbe频道', url: 'https://www.youtube.com/@Bimuakung' },
+    { title: '欢迎访问我的我的Bilibili频道', url: 'https://space.bilibili.com/38343840' }
   ],
 
   // 英雄区左右侧组件颠倒位置
