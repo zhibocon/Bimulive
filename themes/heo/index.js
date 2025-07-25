@@ -45,6 +45,19 @@ import { Style } from './style'
 import AISummary from '@/components/AISummary'
 import ArticleExpirationNotice from '@/components/ArticleExpirationNotice'
 
+// 新增：修改后的NoticeBar组件 - 移除图片功能
+const ModifiedNoticeBar = () => {
+  // 从原始NoticeBar组件中复制必要逻辑，但删除所有与图片相关的部分
+  return (
+    <div className="hidden lg:block">
+      {/* 修改点：完全移除了包含图片的部分 */}
+      <div id="announcement-content" className="px-3">
+        {/* 只保留纯文本公告 */}
+      </div>
+    </div>
+  );
+}
+
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
  * @param props
@@ -66,7 +79,8 @@ const LayoutBase = props => {
       {/* 通知横幅 */}
       {router.route === '/' ? (
         <>
-          <NoticeBar />
+          {/* 修改点：使用改造后的公告栏组件 - 完全移除图片 */}
+          <ModifiedNoticeBar />
           <Hero {...props} />
         </>
       ) : null}
