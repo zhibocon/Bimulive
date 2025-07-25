@@ -1,9 +1,4 @@
 /* eslint-disable react/no-unknown-property */
-/**
- * 此处样式只对当前主题生效
- * 此处不支持tailwindCSS的 @apply 语法
- * @returns
- */
 const Style = () => {
   return (
     <style jsx global>{`
@@ -61,9 +56,20 @@ const Style = () => {
           transform: translateX(-50%);
         }
       }
+
+      /* 修复公告栏头像图片在 hover 时变透明的问题 */
+      #announcement-content img {
+        opacity: 1 !important;
+        filter: none !important;
+        transition: none !important;
+      }
+
+      #announcement-content img:hover {
+        opacity: 1 !important;
+        filter: none !important;
+      }
     `}</style>
   )
 }
 
 export { Style }
-
