@@ -1,16 +1,17 @@
 const CONFIG = {
   HEO_HOME_POST_TWO_COLS: true, // 首页博客两列显示，若为false则只显示一列
-  HEO_LOADING_COVER: true, // 页面加载的遮罩动画
+  HEO_LOADING_COVER: false, // 页面加载的遮罩动画
 
   HEO_HOME_BANNER_ENABLE: true,
 
-  HEO_SITE_CREATE_TIME: '2021-09-21', // 建站日期，用于计算网站运行的第几天
+  HEO_SITE_CREATE_TIME: '2016-06-21', // 建站日期，用于计算网站运行的第几天
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到我的博客', url: 'https://blog.tangly1024.com' },
-    { title: '访问文档中心获取更多帮助', url: 'https://docs.tangly1024.com' }
+    { title: '欢迎访问我的Youutbe频道', url: 'https://www.youtube.com/@Bimuakung' },
+    { title: '欢迎访问我的我的Bilibili频道', url: 'https://space.bilibili.com/38343840' }
   ],
+
 
   // 英雄区左右侧组件颠倒位置
   HEO_HERO_REVERSE: false,
@@ -18,19 +19,20 @@ const CONFIG = {
   HEO_HERO_BODY_REVERSE: false,
 
   // 英雄区(首页顶部大卡)
-  HEO_HERO_TITLE_1: '分享编程',
-  HEO_HERO_TITLE_2: '与思维认知',
-  HEO_HERO_TITLE_3: 'TANGLY1024.COM',
-  HEO_HERO_TITLE_4: '新版上线',
-  HEO_HERO_TITLE_5: 'NotionNext4.0 轻松定制主题',
-  HEO_HERO_TITLE_LINK: 'https://tangly1024.com',
+  HEO_HERO_TITLE_1: '来啦？',
+  HEO_HERO_TITLE_2: '请上座~',
+  HEO_HERO_TITLE_3: 'Bimu.tv',
+  HEO_HERO_TITLE_4: '点击',
+  HEO_HERO_TITLE_5: '查看更多',
+  HEO_HERO_TITLE_LINK: 'https://bimu.live/about',
+  
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: '随便逛逛',
 
   // 英雄区显示三个置顶分类
-  HEO_HERO_CATEGORY_1: { title: '必看精选', url: '/tag/必看精选' },
-  HEO_HERO_CATEGORY_2: { title: '热门文章', url: '/tag/热门文章' },
-  HEO_HERO_CATEGORY_3: { title: '实用教程', url: '/tag/实用教程' },
+  HEO_HERO_CATEGORY_1: { title: '独家干货', url: '/tag/独家干货' },
+  HEO_HERO_CATEGORY_2: { title: '0基础系列', url: '/tag/0基础系列' },
+  HEO_HERO_CATEGORY_3: { title: 'OBS教程', url: '/tag/OBS' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HEO_HERO_RECOMMEND_POST_TAG: '推荐',
@@ -39,21 +41,21 @@ const CONFIG = {
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   HEO_INFOCARD_GREETINGS: [
-    '你好！我是',
-    '🔍 分享与热心帮助',
-    '🤝 专修交互与设计',
-    '🏃 脚踏实地行动派',
-    '🏠 智能家居小能手',
-    '🤖️ 数码科技爱好者',
-    '🧱 团队小组发动机'
+  '你好！我是',
+  '📹 分享OBS直播干货',
+  '🧩 拆解主播常见问题',
+  '🎯 实战派内容创作者',
+  '🏠 多平台直播经验丰富',
+  '🤖️ 数码工具爱好者',
+  '🚀 自媒体变现实践者'
   ],
 
   // 个人资料底部按钮
   HEO_INFO_CARD_URL1: '/about',
   HEO_INFO_CARD_ICON1: 'fas fa-user',
-  HEO_INFO_CARD_URL2: 'https://github.com/tangly1024',
+  HEO_INFO_CARD_URL2: 'https://www.youtube.com/@Bimuakung',
   HEO_INFO_CARD_ICON2: 'fab fa-github',
-  HEO_INFO_CARD_URL3: 'https://www.tangly1024.com',
+  HEO_INFO_CARD_URL3: 'https://bimu.tv',
   HEO_INFO_CARD_TEXT3: '了解更多',
 
   // 用户技能图标
@@ -116,11 +118,12 @@ const CONFIG = {
     }
   ],
 
-  HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-  HEO_SOCIAL_CARD_TITLE_1: '交流频道',
-  HEO_SOCIAL_CARD_TITLE_2: '加入我们的社群讨论分享',
-  HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
-  HEO_SOCIAL_CARD_URL: 'https://docs.tangly1024.com/article/how-to-question',
+HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
+HEO_SOCIAL_CARD_TITLE_1: '我的思维与干货频道',
+HEO_SOCIAL_CARD_TITLE_2: '分享个人想法与实用内容',
+HEO_SOCIAL_CARD_TITLE_3: '点击加入探索与讨论',
+HEO_SOCIAL_CARD_URL: 'https://discord.gg/zTzsJUBgfD',
+
 
   // 底部统计面板文案
   HEO_POST_COUNT_TITLE: '文章数:',
