@@ -119,9 +119,9 @@ const CONFIG = {
   ],
 
 HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-HEO_SOCIAL_CARD_TITLE_1: '我的思维与干货频道',
-HEO_SOCIAL_CARD_TITLE_2: '分享个人想法与实用内容',
-HEO_SOCIAL_CARD_TITLE_3: '点击加入探索与讨论',
+HEO_SOCIAL_CARD_TITLE_1: '发散思维',
+HEO_SOCIAL_CARD_TITLE_2: '发布一些灵感',
+HEO_SOCIAL_CARD_TITLE_3: '点击免费浏览',
 HEO_SOCIAL_CARD_URL: 'https://discord.gg/zTzsJUBgfD',
 
 
