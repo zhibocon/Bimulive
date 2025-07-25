@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /**
  *   HEO 主题说明
  *  > 主题设计者 [张洪](https://zhheo.com/)
@@ -32,7 +33,6 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import LatestPostsGroup from './components/LatestPostsGroup'
-import { NoticeBar } from './components/NoticeBar'
 import PostAdjacent from './components/PostAdjacent'
 import PostCopyright from './components/PostCopyright'
 import PostHeader from './components/PostHeader'
@@ -45,17 +45,32 @@ import { Style } from './style'
 import AISummary from '@/components/AISummary'
 import ArticleExpirationNotice from '@/components/ArticleExpirationNotice'
 
-// 新增：修改后的NoticeBar组件 - 移除图片功能
-const ModifiedNoticeBar = () => {
-  // 从原始NoticeBar组件中复制必要逻辑，但删除所有与图片相关的部分
+// 修改点1：创建无图片的公告栏组件
+const TextOnlyNoticeBar = () => {
+  const notices = siteConfig('HEO_NOTICE_BAR', [], CONFIG)
+  
+  if (!notices || notices.length === 0) {
+    return null
+  }
+
   return (
     <div className="hidden lg:block">
-      {/* 修改点：完全移除了包含图片的部分 */}
       <div id="announcement-content" className="px-3">
-        {/* 只保留纯文本公告 */}
+        <div className="text-center text-sm font-medium text-white">
+          {notices.map((notice, index) => (
+            <a
+              key={index}
+              href={notice.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-3 hover:text-blue-400 transition-all duration-300">
+              {notice.title}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
-  );
+  )
 }
 
 /**
@@ -79,8 +94,8 @@ const LayoutBase = props => {
       {/* 通知横幅 */}
       {router.route === '/' ? (
         <>
-          {/* 修改点：使用改造后的公告栏组件 - 完全移除图片 */}
-          <ModifiedNoticeBar />
+          {/* 修改点2：使用纯文本公告栏 */}
+          <TextOnlyNoticeBar />
           <Hero {...props} />
         </>
       ) : null}
