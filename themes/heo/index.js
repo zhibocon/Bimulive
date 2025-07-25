@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 /**
  *   HEO 主题说明
  *  > 主题设计者 [张洪](https://zhheo.com/)
@@ -33,6 +32,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import LatestPostsGroup from './components/LatestPostsGroup'
+import { NoticeBar } from './components/NoticeBar'
 import PostAdjacent from './components/PostAdjacent'
 import PostCopyright from './components/PostCopyright'
 import PostHeader from './components/PostHeader'
@@ -44,34 +44,6 @@ import CONFIG from './config'
 import { Style } from './style'
 import AISummary from '@/components/AISummary'
 import ArticleExpirationNotice from '@/components/ArticleExpirationNotice'
-
-// 修改点1：创建无图片的公告栏组件
-const TextOnlyNoticeBar = () => {
-  const notices = siteConfig('HEO_NOTICE_BAR', [], CONFIG)
-  
-  if (!notices || notices.length === 0) {
-    return null
-  }
-
-  return (
-    <div className="hidden lg:block">
-      <div id="announcement-content" className="px-3">
-        <div className="text-center text-sm font-medium text-white">
-          {notices.map((notice, index) => (
-            <a
-              key={index}
-              href={notice.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-3 hover:text-blue-400 transition-all duration-300">
-              {notice.title}
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -94,8 +66,7 @@ const LayoutBase = props => {
       {/* 通知横幅 */}
       {router.route === '/' ? (
         <>
-          {/* 修改点2：使用纯文本公告栏 */}
-          <TextOnlyNoticeBar />
+          <NoticeBar />
           <Hero {...props} />
         </>
       ) : null}
